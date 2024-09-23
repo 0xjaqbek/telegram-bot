@@ -2,8 +2,8 @@ const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 
 // Replace with your bot token and group chat ID
-const token = 'YOUR_TELEGRAM_BOT_TOKEN';
-const groupId = 'YOUR_GROUP_CHAT_ID'; // Use '@groupusername' or the numeric group ID
+const token = process.env.TELEGRAM_BOT_TOKEN;
+const groupId = process.env.GROUP_CHAT_ID;
 
 const bot = new TelegramBot(token, { polling: true });
 
